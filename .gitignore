@@ -1,5 +1,8 @@
 /Subtitle_Dataset/Dataset
 /Subtitle_Dataset/zip
 
-
+checkpoints-mbart50-en-si/
 Subtitle_Dataset/tokenized_subtitles.pt
+
+*.safetensors
+*.model
