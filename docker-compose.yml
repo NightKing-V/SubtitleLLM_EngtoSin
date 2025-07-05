@@ -1,0 +1,23 @@
+services:
+  translator:
+    build:
+      context: .         # Assumes Dockerfile is in the current folder
+      dockerfile: Dockerfile
+    container_name: subtitleLLM
+    volumes:
+      - .:/app 
+    environment: 
+      - NVIDIA_VISIBLE_DEVICES=all
+    networks:
+      - translator-net       # Mounts your project files into /app
+    working_dir: /app       # Default shell; override in CLI or later
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - capabilities: [gpu]
+    runtime: nvidia
+
+networks:
+  translator-net:
+    driver: bridge

@@ -1,0 +1,7 @@
+transformers[torch]>=4.40.0
+sentencepiece>=0.1.99
+accelerate>=0.24.0
+datasets>=2.18.0
+protobuf
+scipy
+jupyterlab
